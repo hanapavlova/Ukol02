@@ -6,3 +6,8 @@ Pokud se přihlásíte jako student například na Fakultu Informačních Techno
 Vytvořte webovou stránku, která požádá uživatele nejdříve o jeho křestní jméno a pak příjmení, obojí bez diakritiky. Pomocí metody trim zajistěte, že ve jméně ani příjmení nebudou na začátku ani na konci žádné bílé znaky. Pomocí metody slice vyřízněte ze jména i příjmení příslušné části. Pomocí interpolace řetězců sestavte výslednou adresu a vypište ji do stránky.
 */
 
+const krestniJmeno = (prompt("Zadejte své křestní jméno bez diakritiky:").trim().slice(0, 3))
+const prijmeni = (prompt("Zadejte své příjmení bez diakritiky:").trim().slice(0, 5))
+const domena = "@fit.cvut.cz"
+
+document.body.innerHTML += `<p>${prijmeni}${krestniJmeno}${domena}</p>`
